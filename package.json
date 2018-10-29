@@ -1,0 +1,30 @@
+{
+  "name": "koa-upload",
+  "version": "1.0.0",
+  "description": "基于koa的文件上传服务",
+  "main": "server.js",
+  "dependencies": {
+    "koa": "^2.6.1",
+    "koa-body": "^4.0.4",
+    "koa-router": "^7.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/superlc/koa-upload.git"
+  },
+  "keywords": [
+    "koa;file",
+    "upload"
+  ],
+  "author": "cluo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/superlc/koa-upload/issues"
+  },
+  "homepage": "https://github.com/superlc/koa-upload#readme"
+}
