@@ -23,6 +23,9 @@ const md5File = (file) =>{
 }
 
 router.post('/upload', async (ctx, next) => {
+    console.log(ctx.req.files)
+    console.log(ctx.request.body)
+    console.log(ctx.req.body)
     // 上传单个文件
     const file = ctx.request.files.file
 
