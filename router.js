@@ -6,8 +6,8 @@ const formidable = require('formidable')
 
 const router = new Router()
 
-// const localImgDir = '/data/sftp/cluo/upload/static/img/'
-const localImgDir = 'E:\\Code\\koa-upload\\aaa\\bbb\\ccc\\'
+const localImgDir = '/data/sftp/cluo/upload/static/img/'
+// const localImgDir = 'E:\\Code\\koa-upload\\aaa\\bbb\\ccc\\'
 const hostImgDir = 'https://www.cluo.me/static/img/'
 
 /**
