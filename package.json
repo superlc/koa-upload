@@ -4,8 +4,8 @@
   "description": "基于koa的文件上传服务",
   "main": "server.js",
   "dependencies": {
+    "formidable": "^1.2.1",
     "koa": "^2.6.1",
-    "koa-body": "^4.0.4",
     "koa-router": "^7.4.0"
   },
   "devDependencies": {},
