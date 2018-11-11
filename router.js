@@ -127,4 +127,12 @@ router.post('/upload', async (ctx, next) => {
     }
 })
 
+router.get('/will/test', async (ctx, next) => {
+    ctx.body = {
+        code: 0,
+        data: {
+            name: 'cluo'
+        }
+    }
+})
 module.exports = router
