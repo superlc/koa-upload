@@ -97,7 +97,7 @@ const createFilePath = (filePath) => {
     })
 }
 
-router.post('/upload', async (ctx, next) => {
+router.post('/api/upload', async (ctx, next) => {
     const formResult = await formReq(ctx.req)
     // 上传单个文件
     const file = formResult.files.file
@@ -127,7 +127,7 @@ router.post('/upload', async (ctx, next) => {
     }
 })
 
-router.get('/will/test', async (ctx, next) => {
+router.get('/api/will/test', async (ctx, next) => {
     ctx.body = {
         code: 0,
         data: {
