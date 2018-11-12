@@ -16,7 +16,7 @@ const bookingSchema = new Schema({
     education: String,
     phone: String,
     telephone: String,
-    smg: Boolean,
+    smg: String,
     contactTime: String,
     registerCenter: String,
 
