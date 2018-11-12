@@ -6,7 +6,9 @@
   "dependencies": {
     "formidable": "^1.2.1",
     "koa": "^2.6.1",
-    "koa-router": "^7.4.0"
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "mongoose": "^5.3.11"
   },
   "devDependencies": {},
   "scripts": {
