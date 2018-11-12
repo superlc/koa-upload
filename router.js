@@ -166,8 +166,8 @@ router.get('/api/will/bookings', async (ctx, next) => {
     const connectResult = await db.connect()
 
     if (connectResult.status) {
-        const post = new Post().getModel()
-        const result = await post.find({})
+        const booking = new Booking().getModel()
+        const result = await booking.find({})
 
         console.log(result)
 
