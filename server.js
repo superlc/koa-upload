@@ -12,4 +12,5 @@ app
     .use(router.routes())
     .use(router.allowedMethods())
 
+console.log('Listening on port：8000')
 app.listen(8000)
