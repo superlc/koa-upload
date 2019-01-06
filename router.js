@@ -40,22 +40,28 @@ router.post('/api/will/booking/add', async (ctx, next) => {
     }
 })
 
+// 加密方法
+const encrypt = (data) => {
+	const key = fs.readFileSync('rsa/pub.key', { encoding: 'utf8'})
+	// 注意，第二个参数是Buffer类型
+	return crypto.publicEncrypt(key, Buffer.from(data))
+}
+
 // 查询记录
-router.get('/api/will/bookings', async (ctx, next) => {
-    console.log('ggggggggggggggggggggggggg')
+router.post('/api/will/bookings', async (ctx, next) => {
+    // 获取客户端发来的数据
+    const params = ctx.request.body
     const connectResult = await db.connect()
-    console.log('aaaaaaaaaaaaaaaaaaaaaaaaaa')
 
     if (connectResult.status) {
         const booking = new Booking().getModel()
         const result = await booking.find({})
-
-        console.log(result)
-
+        const resultStr = JSON.stringify(result)
+        const resultEncodedBase64 = encrypt(resultStr).toString('base64')
         ctx.body = {
             code: 0,
             data: {
-                bookings: result
+                bookings: resultEncodedBase64
             }
         }
     } else {
